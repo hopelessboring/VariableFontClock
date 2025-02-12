@@ -1,0 +1,78 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'graduate';
+    src: url('../fonts/Graduate.woff2') format('woff2');
+}
+
+html {
+    background-color: #000000;
+    cursor: none;
+    width: 100%;
+    height: 100%;
+}
+
+.typography {
+    font-family: 'graduate';
+    color: #ffffff;
+    top: 50%;
+    left: 50%;
+    position: fixed;
+    transform: translate(-50%, -43.5%);
+    font-variation-settings: 'DIST' 0;
+    font-size: 10vw;
+    white-space: nowrap;
+    position: absolute;
+
+}
+
+#h1 {
+    animation-name: a-h1;
+    animation-duration: 86400s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+#h2 {
+    animation-name: a-h2;
+    animation-duration: 86400s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+/* Subtle colon adjustment */
+.typograph .colon {
+    width: 0.5em;
+}
+
+#m1 {
+    animation-name: a-m1;
+    animation-duration: 3600s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+#m2 {
+    animation-name: a-m2;
+    animation-duration: 600s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+#s1 {
+    animation-name: a-s1;
+    animation-duration: 60s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+#s2 {
+    animation-name: a-s2;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}

@@ -1,0 +1,2963 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* @font-face {
+    font-family: 'clock';
+    src: url('../fonts/clock_v33VF.woff2') format('woff2-variations'),
+        url('../fonts/clock_v33VF.woff2') format('woff2'),
+        url('../fonts/clock_v33VF.ttf') format('truetype-variations');
+} */
+
+@font-face {
+    font-family: 'gnomon-bg';
+    src: url('../fonts/Gnomon-Simple.woff2') format('woff2');
+
+    font-family: 'gnomon-fg';
+    src: url('../fonts/Gnomon-Foreground.woff2') format('woff2');
+
+}
+
+html {
+    background-color: #000000;
+    cursor: none;
+
+    width: 100%;
+    height: 100%;
+}
+
+.schrift {
+    position: fixed;
+
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -43.5%);
+
+    font-family: 'gnomon-fg';
+
+    font-variation-settings: 'DIST' 0;
+    font-size: 19vw;
+    color: #FFFFFF;
+}
+
+#h1 {
+    animation-name: a-h1;
+    animation-duration: 86400s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+#h2 {
+    animation-name: a-h2;
+    animation-duration: 86400s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+#m1 {
+    animation-name: a-m1;
+    animation-duration: 3600s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+#m2 {
+    animation-name: a-m2;
+    animation-duration: 600s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+#s1 {
+    animation-name: a-s1;
+    animation-duration: 60s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+#s2 {
+    animation-name: a-s2;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+
+@keyframes a-h1 {
+    0% {
+        font-variation-settings: 'DIST' -50;
+    }
+
+    4.166% {
+        font-variation-settings: 'DIST' -38.270;
+    }
+
+    8.333% {
+        font-variation-settings: 'DIST' -26.762;
+    }
+
+    12.5% {
+        font-variation-settings: 'DIST' -15.790;
+    }
+
+    16.666% {
+        font-variation-settings: 'DIST' -5.995;
+    }
+
+    19.166% {
+        font-variation-settings: 'DIST' -1.448;
+    }
+
+    20.833% {
+        font-variation-settings: 'DIST' 0;
+    }
+
+    22.5% {
+        font-variation-settings: 'DIST' 1.448;
+    }
+
+    25% {
+        font-variation-settings: 'DIST' 5.995;
+    }
+
+    29.166% {
+        font-variation-settings: 'DIST' 15.790;
+    }
+
+    33.333% {
+        font-variation-settings: 'DIST' 26.762;
+    }
+
+    37.5% {
+        font-variation-settings: 'DIST' 38.270;
+    }
+
+    41.666% {
+        font-variation-settings: 'DIST' 50;
+    }
+
+    45.833% {
+        font-variation-settings: 'DIST' 61.730;
+    }
+
+    50% {
+        font-variation-settings: 'DIST' 73.238;
+    }
+
+    54.166% {
+        font-variation-settings: 'DIST' 84.210;
+    }
+
+    58.333% {
+        font-variation-settings: 'DIST' 94.005;
+    }
+
+    60.833% {
+        font-variation-settings: 'DIST' 98.552;
+    }
+
+    62.5% {
+        font-variation-settings: 'DIST' 100;
+    }
+
+    64.166% {
+        font-variation-settings: 'DIST' 101.448;
+    }
+
+    66.666% {
+        font-variation-settings: 'DIST' 105.995;
+    }
+
+    70.833% {
+        font-variation-settings: 'DIST' 115.790;
+    }
+
+    75% {
+        font-variation-settings: 'DIST' 126.762;
+    }
+
+    79.166% {
+        font-variation-settings: 'DIST' 138.270;
+    }
+
+    83.333% {
+        font-variation-settings: 'DIST' 150;
+    }
+
+    85% {
+        font-variation-settings: 'DIST' 161.730;
+    }
+
+    86.666% {
+        font-variation-settings: 'DIST' 173.238;
+    }
+
+    88.333% {
+        font-variation-settings: 'DIST' 184.210;
+    }
+
+    90% {
+        font-variation-settings: 'DIST' 194.005;
+    }
+
+    91% {
+        font-variation-settings: 'DIST' 198.552;
+    }
+
+    91.666% {
+        font-variation-settings: 'DIST' 200;
+    }
+
+    92.333% {
+        font-variation-settings: 'DIST' 201.448;
+    }
+
+    93.333% {
+        font-variation-settings: 'DIST' 205.995;
+    }
+
+    95% {
+        font-variation-settings: 'DIST' 215.790;
+    }
+
+    96.666% {
+        font-variation-settings: 'DIST' 226.762;
+    }
+
+    98.333% {
+        font-variation-settings: 'DIST' 238.270;
+    }
+
+    100% {
+        font-variation-settings: 'DIST' 250;
+    }
+}
+
+@keyframes a-h2 {
+    0% {
+        font-variation-settings: 'DIST' -50;
+    }
+
+    0.416% {
+        font-variation-settings: 'DIST' -38.270;
+    }
+
+    0.833% {
+        font-variation-settings: 'DIST' -26.762;
+    }
+
+    1.25% {
+        font-variation-settings: 'DIST' -15.790;
+    }
+
+    1.666% {
+        font-variation-settings: 'DIST' -5.995;
+    }
+
+    1.916% {
+        font-variation-settings: 'DIST' -1.448;
+    }
+
+    2.083% {
+        font-variation-settings: 'DIST' 0;
+    }
+
+    2.25% {
+        font-variation-settings: 'DIST' 1.448;
+    }
+
+    2.5% {
+        font-variation-settings: 'DIST' 5.995;
+    }
+
+    2.916% {
+        font-variation-settings: 'DIST' 15.790;
+    }
+
+    3.333% {
+        font-variation-settings: 'DIST' 26.762;
+    }
+
+    3.75% {
+        font-variation-settings: 'DIST' 38.270;
+    }
+
+    4.166% {
+        font-variation-settings: 'DIST' 50;
+    }
+
+    4.583% {
+        font-variation-settings: 'DIST' 61.730;
+    }
+
+    5% {
+        font-variation-settings: 'DIST' 73.238;
+    }
+
+    5.416% {
+        font-variation-settings: 'DIST' 84.210;
+    }
+
+    5.833% {
+        font-variation-settings: 'DIST' 94.005;
+    }
+
+    6.083% {
+        font-variation-settings: 'DIST' 98.552;
+    }
+
+    6.25% {
+        font-variation-settings: 'DIST' 100;
+    }
+
+    6.416% {
+        font-variation-settings: 'DIST' 101.448;
+    }
+
+    6.666% {
+        font-variation-settings: 'DIST' 105.995;
+    }
+
+    7.083% {
+        font-variation-settings: 'DIST' 115.790;
+    }
+
+    7.5% {
+        font-variation-settings: 'DIST' 126.762;
+    }
+
+    7.916% {
+        font-variation-settings: 'DIST' 138.270;
+    }
+
+    8.333% {
+        font-variation-settings: 'DIST' 150;
+    }
+
+    8.75% {
+        font-variation-settings: 'DIST' 161.730;
+    }
+
+    9.166% {
+        font-variation-settings: 'DIST' 173.238;
+    }
+
+    9.583% {
+        font-variation-settings: 'DIST' 184.210;
+    }
+
+    10% {
+        font-variation-settings: 'DIST' 194.005;
+    }
+
+    10.25% {
+        font-variation-settings: 'DIST' 198.552;
+    }
+
+    10.416% {
+        font-variation-settings: 'DIST' 200;
+    }
+
+    10.583% {
+        font-variation-settings: 'DIST' 201.448;
+    }
+
+    10.833% {
+        font-variation-settings: 'DIST' 205.995;
+    }
+
+    11.25% {
+        font-variation-settings: 'DIST' 215.790;
+    }
+
+    11.666% {
+        font-variation-settings: 'DIST' 226.762;
+    }
+
+    12.083% {
+        font-variation-settings: 'DIST' 238.270;
+    }
+
+    12.5% {
+        font-variation-settings: 'DIST' 250;
+    }
+
+    12.916% {
+        font-variation-settings: 'DIST' 261.730;
+    }
+
+    13.333% {
+        font-variation-settings: 'DIST' 273.238;
+    }
+
+    13.75% {
+        font-variation-settings: 'DIST' 284.210;
+    }
+
+    14.166% {
+        font-variation-settings: 'DIST' 294.005;
+    }
+
+    14.416% {
+        font-variation-settings: 'DIST' 298.552;
+    }
+
+    14.583% {
+        font-variation-settings: 'DIST' 300;
+    }
+
+    14.75% {
+        font-variation-settings: 'DIST' 301.448;
+    }
+
+    15% {
+        font-variation-settings: 'DIST' 305.995;
+    }
+
+    15.416% {
+        font-variation-settings: 'DIST' 315.790;
+    }
+
+    15.833% {
+        font-variation-settings: 'DIST' 326.762;
+    }
+
+    16.25% {
+        font-variation-settings: 'DIST' 338.270;
+    }
+
+    16.666% {
+        font-variation-settings: 'DIST' 350;
+    }
+
+    17.083% {
+        font-variation-settings: 'DIST' 361.730;
+    }
+
+    17.5% {
+        font-variation-settings: 'DIST' 373.238;
+    }
+
+    17.916% {
+        font-variation-settings: 'DIST' 384.210;
+    }
+
+    18.333% {
+        font-variation-settings: 'DIST' 394.005;
+    }
+
+    18.583% {
+        font-variation-settings: 'DIST' 398.552;
+    }
+
+    18.75% {
+        font-variation-settings: 'DIST' 400;
+    }
+
+    18.916% {
+        font-variation-settings: 'DIST' 401.448;
+    }
+
+    19.166% {
+        font-variation-settings: 'DIST' 405.995;
+    }
+
+    19.583% {
+        font-variation-settings: 'DIST' 415.790;
+    }
+
+    20% {
+        font-variation-settings: 'DIST' 426.762;
+    }
+
+    20.416% {
+        font-variation-settings: 'DIST' 438.270;
+    }
+
+    20.833% {
+        font-variation-settings: 'DIST' 450;
+    }
+
+    21.25% {
+        font-variation-settings: 'DIST' 461.730;
+    }
+
+    21.666% {
+        font-variation-settings: 'DIST' 473.238;
+    }
+
+    22.083% {
+        font-variation-settings: 'DIST' 484.210;
+    }
+
+    22.5% {
+        font-variation-settings: 'DIST' 494.005;
+    }
+
+    22.75% {
+        font-variation-settings: 'DIST' 498.552;
+    }
+
+    22.916% {
+        font-variation-settings: 'DIST' 500;
+    }
+
+    23.083% {
+        font-variation-settings: 'DIST' 501.448;
+    }
+
+    23.333% {
+        font-variation-settings: 'DIST' 505.995;
+    }
+
+    23.75% {
+        font-variation-settings: 'DIST' 515.790;
+    }
+
+    24.166% {
+        font-variation-settings: 'DIST' 526.762;
+    }
+
+    24.583% {
+        font-variation-settings: 'DIST' 538.270;
+    }
+
+    25% {
+        font-variation-settings: 'DIST' 550;
+    }
+
+    25.416% {
+        font-variation-settings: 'DIST' 561.730;
+    }
+
+    25.833% {
+        font-variation-settings: 'DIST' 573.238;
+    }
+
+    26.25% {
+        font-variation-settings: 'DIST' 584.210;
+    }
+
+    26.666% {
+        font-variation-settings: 'DIST' 594.005;
+    }
+
+    26.916% {
+        font-variation-settings: 'DIST' 598.552;
+    }
+
+    27.083% {
+        font-variation-settings: 'DIST' 600;
+    }
+
+    27.25% {
+        font-variation-settings: 'DIST' 601.448;
+    }
+
+    27.5% {
+        font-variation-settings: 'DIST' 605.995;
+    }
+
+    27.916% {
+        font-variation-settings: 'DIST' 615.790;
+    }
+
+    28.333% {
+        font-variation-settings: 'DIST' 626.762;
+    }
+
+    28.75% {
+        font-variation-settings: 'DIST' 638.270;
+    }
+
+    29.166% {
+        font-variation-settings: 'DIST' 650;
+    }
+
+    29.583% {
+        font-variation-settings: 'DIST' 661.730;
+    }
+
+    30% {
+        font-variation-settings: 'DIST' 673.238;
+    }
+
+    30.416% {
+        font-variation-settings: 'DIST' 684.210;
+    }
+
+    30.833% {
+        font-variation-settings: 'DIST' 694.005;
+    }
+
+    31.083% {
+        font-variation-settings: 'DIST' 698.552;
+    }
+
+    31.25% {
+        font-variation-settings: 'DIST' 700;
+    }
+
+    31.416% {
+        font-variation-settings: 'DIST' 701.448;
+    }
+
+    31.666% {
+        font-variation-settings: 'DIST' 705.995;
+    }
+
+    32.083% {
+        font-variation-settings: 'DIST' 715.790;
+    }
+
+    32.5% {
+        font-variation-settings: 'DIST' 726.762;
+    }
+
+    32.916% {
+        font-variation-settings: 'DIST' 738.270;
+    }
+
+    33.333% {
+        font-variation-settings: 'DIST' 750;
+    }
+
+    33.75% {
+        font-variation-settings: 'DIST' 761.730;
+    }
+
+    34.166% {
+        font-variation-settings: 'DIST' 773.238;
+    }
+
+    34.583% {
+        font-variation-settings: 'DIST' 784.210;
+    }
+
+    35% {
+        font-variation-settings: 'DIST' 794.005;
+    }
+
+    35.25% {
+        font-variation-settings: 'DIST' 798.552;
+    }
+
+    35.416% {
+        font-variation-settings: 'DIST' 800;
+    }
+
+    35.583% {
+        font-variation-settings: 'DIST' 801.448;
+    }
+
+    35.833% {
+        font-variation-settings: 'DIST' 805.995;
+    }
+
+    36.25% {
+        font-variation-settings: 'DIST' 815.790;
+    }
+
+    36.666% {
+        font-variation-settings: 'DIST' 826.762;
+    }
+
+    37.083% {
+        font-variation-settings: 'DIST' 838.270;
+    }
+
+    37.5% {
+        font-variation-settings: 'DIST' 850;
+    }
+
+    37.916% {
+        font-variation-settings: 'DIST' 861.730;
+    }
+
+    38.333% {
+        font-variation-settings: 'DIST' 873.238;
+    }
+
+    38.75% {
+        font-variation-settings: 'DIST' 884.210;
+    }
+
+    39.166% {
+        font-variation-settings: 'DIST' 894.005;
+    }
+
+    39.416% {
+        font-variation-settings: 'DIST' 898.552;
+    }
+
+    39.583% {
+        font-variation-settings: 'DIST' 900;
+    }
+
+    39.75% {
+        font-variation-settings: 'DIST' 901.448;
+    }
+
+    40% {
+        font-variation-settings: 'DIST' 905.995;
+    }
+
+    40.416% {
+        font-variation-settings: 'DIST' 915.790;
+    }
+
+    40.833% {
+        font-variation-settings: 'DIST' 926.762;
+    }
+
+    41.25% {
+        font-variation-settings: 'DIST' 938.270;
+    }
+
+    41.666% {
+        font-variation-settings: 'DIST' 950;
+    }
+
+    42.083% {
+        font-variation-settings: 'DIST' 961.730;
+    }
+
+    42.5% {
+        font-variation-settings: 'DIST' 973.238;
+    }
+
+    42.916% {
+        font-variation-settings: 'DIST' 984.210;
+    }
+
+    43.333% {
+        font-variation-settings: 'DIST' 994.005;
+    }
+
+    43.583% {
+        font-variation-settings: 'DIST' 998.552;
+    }
+
+    43.75% {
+        font-variation-settings: 'DIST' 1000;
+    }
+
+    43.916% {
+        font-variation-settings: 'DIST' 1001.448;
+    }
+
+    44.166% {
+        font-variation-settings: 'DIST' 1005.995;
+    }
+
+    44.583% {
+        font-variation-settings: 'DIST' 1015.790;
+    }
+
+    45% {
+        font-variation-settings: 'DIST' 1026.762;
+    }
+
+    45.416% {
+        font-variation-settings: 'DIST' 1038.270;
+    }
+
+    45.833% {
+        font-variation-settings: 'DIST' 1050;
+    }
+
+    46.25% {
+        font-variation-settings: 'DIST' 1061.730;
+    }
+
+    46.666% {
+        font-variation-settings: 'DIST' 1073.238;
+    }
+
+    47.083% {
+        font-variation-settings: 'DIST' 1084.210;
+    }
+
+    47.5% {
+        font-variation-settings: 'DIST' 1094.005;
+    }
+
+    47.75% {
+        font-variation-settings: 'DIST' 1098.552;
+    }
+
+    47.916% {
+        font-variation-settings: 'DIST' 1100;
+    }
+
+    48.083% {
+        font-variation-settings: 'DIST' 1101.448;
+    }
+
+    48.333% {
+        font-variation-settings: 'DIST' 1105.995;
+    }
+
+    48.75% {
+        font-variation-settings: 'DIST' 1115.790;
+    }
+
+    49.166% {
+        font-variation-settings: 'DIST' 1126.762;
+    }
+
+    49.583% {
+        font-variation-settings: 'DIST' 1138.270;
+    }
+
+    50% {
+        font-variation-settings: 'DIST' 1150;
+    }
+
+    50.416% {
+        font-variation-settings: 'DIST' 1161.730;
+    }
+
+    50.833% {
+        font-variation-settings: 'DIST' 1173.238;
+    }
+
+    51.25% {
+        font-variation-settings: 'DIST' 1184.210;
+    }
+
+    51.666% {
+        font-variation-settings: 'DIST' 1194.005;
+    }
+
+    51.916% {
+        font-variation-settings: 'DIST' 1198.552;
+    }
+
+    52.083% {
+        font-variation-settings: 'DIST' 1200;
+    }
+
+    52.25% {
+        font-variation-settings: 'DIST' 1201.448;
+    }
+
+    52.5% {
+        font-variation-settings: 'DIST' 1205.995;
+    }
+
+    52.916% {
+        font-variation-settings: 'DIST' 1215.790;
+    }
+
+    53.333% {
+        font-variation-settings: 'DIST' 1226.762;
+    }
+
+    53.75% {
+        font-variation-settings: 'DIST' 1238.270;
+    }
+
+    54.166% {
+        font-variation-settings: 'DIST' 1250;
+    }
+
+    54.583% {
+        font-variation-settings: 'DIST' 1261.730;
+    }
+
+    55% {
+        font-variation-settings: 'DIST' 1273.238;
+    }
+
+    55.416% {
+        font-variation-settings: 'DIST' 1284.210;
+    }
+
+    55.833% {
+        font-variation-settings: 'DIST' 1294.005;
+    }
+
+    56.083% {
+        font-variation-settings: 'DIST' 1298.552;
+    }
+
+    56.25% {
+        font-variation-settings: 'DIST' 1300;
+    }
+
+    56.416% {
+        font-variation-settings: 'DIST' 1301.448;
+    }
+
+    56.666% {
+        font-variation-settings: 'DIST' 1305.995;
+    }
+
+    57.083% {
+        font-variation-settings: 'DIST' 1315.790;
+    }
+
+    57.5% {
+        font-variation-settings: 'DIST' 1326.762;
+    }
+
+    57.916% {
+        font-variation-settings: 'DIST' 1338.270;
+    }
+
+    58.333% {
+        font-variation-settings: 'DIST' 1350;
+    }
+
+    58.75% {
+        font-variation-settings: 'DIST' 1361.730;
+    }
+
+    59.166% {
+        font-variation-settings: 'DIST' 1373.238;
+    }
+
+    59.583% {
+        font-variation-settings: 'DIST' 1384.210;
+    }
+
+    60% {
+        font-variation-settings: 'DIST' 1394.005;
+    }
+
+    60.25% {
+        font-variation-settings: 'DIST' 1398.552;
+    }
+
+    60.416% {
+        font-variation-settings: 'DIST' 1400;
+    }
+
+    60.583% {
+        font-variation-settings: 'DIST' 1401.448;
+    }
+
+    60.833% {
+        font-variation-settings: 'DIST' 1405.995;
+    }
+
+    61.25% {
+        font-variation-settings: 'DIST' 1415.790;
+    }
+
+    61.666% {
+        font-variation-settings: 'DIST' 1426.762;
+    }
+
+    62.083% {
+        font-variation-settings: 'DIST' 1438.270;
+    }
+
+    62.5% {
+        font-variation-settings: 'DIST' 1450;
+    }
+
+    62.916% {
+        font-variation-settings: 'DIST' 1461.730;
+    }
+
+    63.333% {
+        font-variation-settings: 'DIST' 1473.238;
+    }
+
+    63.75% {
+        font-variation-settings: 'DIST' 1484.210;
+    }
+
+    64.166% {
+        font-variation-settings: 'DIST' 1494.005;
+    }
+
+    64.416% {
+        font-variation-settings: 'DIST' 1498.552;
+    }
+
+    64.583% {
+        font-variation-settings: 'DIST' 1500;
+    }
+
+    64.75% {
+        font-variation-settings: 'DIST' 1501.448;
+    }
+
+    65% {
+        font-variation-settings: 'DIST' 1505.995;
+    }
+
+    65.416% {
+        font-variation-settings: 'DIST' 1515.790;
+    }
+
+    65.833% {
+        font-variation-settings: 'DIST' 1526.762;
+    }
+
+    66.25% {
+        font-variation-settings: 'DIST' 1538.270;
+    }
+
+    66.666% {
+        font-variation-settings: 'DIST' 1550;
+    }
+
+    67.083% {
+        font-variation-settings: 'DIST' 1561.730;
+    }
+
+    67.5% {
+        font-variation-settings: 'DIST' 1573.238;
+    }
+
+    67.916% {
+        font-variation-settings: 'DIST' 1584.210;
+    }
+
+    68.333% {
+        font-variation-settings: 'DIST' 1594.005;
+    }
+
+    66.583% {
+        font-variation-settings: 'DIST' 1598.552;
+    }
+
+    68.75% {
+        font-variation-settings: 'DIST' 1600;
+    }
+
+    68.916% {
+        font-variation-settings: 'DIST' 1601.448;
+    }
+
+    69.166% {
+        font-variation-settings: 'DIST' 1605.995;
+    }
+
+    69.583% {
+        font-variation-settings: 'DIST' 1615.790;
+    }
+
+    70% {
+        font-variation-settings: 'DIST' 1626.762;
+    }
+
+    70.416% {
+        font-variation-settings: 'DIST' 1638.270;
+    }
+
+    70.833% {
+        font-variation-settings: 'DIST' 1650;
+    }
+
+    71.25% {
+        font-variation-settings: 'DIST' 1661.730;
+    }
+
+    71.666% {
+        font-variation-settings: 'DIST' 1673.238;
+    }
+
+    72.083% {
+        font-variation-settings: 'DIST' 1684.210;
+    }
+
+    72.5% {
+        font-variation-settings: 'DIST' 1694.005;
+    }
+
+    72.75% {
+        font-variation-settings: 'DIST' 1698.552;
+    }
+
+    72.916% {
+        font-variation-settings: 'DIST' 1700;
+    }
+
+    73.083% {
+        font-variation-settings: 'DIST' 1701.448;
+    }
+
+    73.333% {
+        font-variation-settings: 'DIST' 1705.995;
+    }
+
+    73.75% {
+        font-variation-settings: 'DIST' 1715.790;
+    }
+
+    74.166% {
+        font-variation-settings: 'DIST' 1726.762;
+    }
+
+    74.583% {
+        font-variation-settings: 'DIST' 1738.270;
+    }
+
+    75% {
+        font-variation-settings: 'DIST' 1750;
+    }
+
+    75.416% {
+        font-variation-settings: 'DIST' 1761.730;
+    }
+
+    75.833% {
+        font-variation-settings: 'DIST' 1773.238;
+    }
+
+    76.25% {
+        font-variation-settings: 'DIST' 1784.210;
+    }
+
+    76.666% {
+        font-variation-settings: 'DIST' 1794.005;
+    }
+
+    76.916% {
+        font-variation-settings: 'DIST' 1798.552;
+    }
+
+    77.083% {
+        font-variation-settings: 'DIST' 1800;
+    }
+
+    77.25% {
+        font-variation-settings: 'DIST' 1801.448;
+    }
+
+    77.5% {
+        font-variation-settings: 'DIST' 1805.995;
+    }
+
+    77.916% {
+        font-variation-settings: 'DIST' 1815.790;
+    }
+
+    78.333% {
+        font-variation-settings: 'DIST' 1826.762;
+    }
+
+    78.75% {
+        font-variation-settings: 'DIST' 1838.270;
+    }
+
+    79.166% {
+        font-variation-settings: 'DIST' 1850;
+    }
+
+    79.583% {
+        font-variation-settings: 'DIST' 1861.730;
+    }
+
+    80% {
+        font-variation-settings: 'DIST' 1873.238;
+    }
+
+    80.416% {
+        font-variation-settings: 'DIST' 1884.210;
+    }
+
+    80.833% {
+        font-variation-settings: 'DIST' 1894.005;
+    }
+
+    81.083% {
+        font-variation-settings: 'DIST' 1898.552;
+    }
+
+    81.25% {
+        font-variation-settings: 'DIST' 1900;
+    }
+
+    81.416% {
+        font-variation-settings: 'DIST' 1901.448;
+    }
+
+    81.666% {
+        font-variation-settings: 'DIST' 1905.995;
+    }
+
+    82.083% {
+        font-variation-settings: 'DIST' 1915.790;
+    }
+
+    82.5% {
+        font-variation-settings: 'DIST' 1926.762;
+    }
+
+    82.916% {
+        font-variation-settings: 'DIST' 1938.270;
+    }
+
+    83.333% {
+        font-variation-settings: 'DIST' 1950;
+    }
+
+    83.75% {
+        font-variation-settings: 'DIST' 1961.730;
+    }
+
+    84.166% {
+        font-variation-settings: 'DIST' 1973.238;
+    }
+
+    84.583% {
+        font-variation-settings: 'DIST' 1984.210;
+    }
+
+    85% {
+        font-variation-settings: 'DIST' 1994.005;
+    }
+
+    85.25% {
+        font-variation-settings: 'DIST' 1998.552;
+    }
+
+    85.416% {
+        font-variation-settings: 'DIST' 2000;
+    }
+
+    85.583% {
+        font-variation-settings: 'DIST' 2001.448;
+    }
+
+    85.833% {
+        font-variation-settings: 'DIST' 2005.995;
+    }
+
+    86.25% {
+        font-variation-settings: 'DIST' 2015.790;
+    }
+
+    86.666% {
+        font-variation-settings: 'DIST' 2026.762;
+    }
+
+    87.083% {
+        font-variation-settings: 'DIST' 2038.270;
+    }
+
+    87.5% {
+        font-variation-settings: 'DIST' 2050;
+    }
+
+    87.916% {
+        font-variation-settings: 'DIST' 2061.730;
+    }
+
+    88.333% {
+        font-variation-settings: 'DIST' 2073.238;
+    }
+
+    88.75% {
+        font-variation-settings: 'DIST' 2084.210;
+    }
+
+    89.166% {
+        font-variation-settings: 'DIST' 2094.005;
+    }
+
+    89.416% {
+        font-variation-settings: 'DIST' 2098.552;
+    }
+
+    89.583% {
+        font-variation-settings: 'DIST' 2100;
+    }
+
+    89.75% {
+        font-variation-settings: 'DIST' 2101.448;
+    }
+
+    90% {
+        font-variation-settings: 'DIST' 2105.995;
+    }
+
+    90.416% {
+        font-variation-settings: 'DIST' 2115.790;
+    }
+
+    90.833% {
+        font-variation-settings: 'DIST' 2126.762;
+    }
+
+    91.25% {
+        font-variation-settings: 'DIST' 2138.270;
+    }
+
+    91.666% {
+        font-variation-settings: 'DIST' 2150;
+    }
+
+    92.083% {
+        font-variation-settings: 'DIST' 2161.730;
+    }
+
+    92.5% {
+        font-variation-settings: 'DIST' 2173.238;
+    }
+
+    92.916% {
+        font-variation-settings: 'DIST' 2184.210;
+    }
+
+    93.333% {
+        font-variation-settings: 'DIST' 2194.005;
+    }
+
+    93.583% {
+        font-variation-settings: 'DIST' 2198.552;
+    }
+
+    93.75% {
+        font-variation-settings: 'DIST' 2200;
+    }
+
+    93.916% {
+        font-variation-settings: 'DIST' 2201.448;
+    }
+
+    94.166% {
+        font-variation-settings: 'DIST' 2205.995;
+    }
+
+    94.583% {
+        font-variation-settings: 'DIST' 2215.790;
+    }
+
+    95% {
+        font-variation-settings: 'DIST' 2226.762;
+    }
+
+    95.416% {
+        font-variation-settings: 'DIST' 2238.270;
+    }
+
+    95.833% {
+        font-variation-settings: 'DIST' 2250;
+    }
+
+    96.25% {
+        font-variation-settings: 'DIST' 2261.730;
+    }
+
+    96.666% {
+        font-variation-settings: 'DIST' 2273.238;
+    }
+
+    97.083% {
+        font-variation-settings: 'DIST' 2284.210;
+    }
+
+    97.5% {
+        font-variation-settings: 'DIST' 2294.005;
+    }
+
+    97.75% {
+        font-variation-settings: 'DIST' 2298.552;
+    }
+
+    97.916% {
+        font-variation-settings: 'DIST' 2300;
+    }
+
+    98.083% {
+        font-variation-settings: 'DIST' 2301.448;
+    }
+
+    98.333% {
+        font-variation-settings: 'DIST' 2305.995;
+    }
+
+    98.75% {
+        font-variation-settings: 'DIST' 2315.790;
+    }
+
+    99.166% {
+        font-variation-settings: 'DIST' 2326.762;
+    }
+
+    99.583% {
+        font-variation-settings: 'DIST' 2338.270;
+    }
+
+    100% {
+        font-variation-settings: 'DIST' 2350;
+    }
+
+}
+
+@keyframes a-m1 {
+
+    0% {
+        font-variation-settings: 'DIST' -50;
+    }
+
+    1.666% {
+        font-variation-settings: 'DIST' -38.270;
+    }
+
+    3.333% {
+        font-variation-settings: 'DIST' -26.762;
+    }
+
+    5% {
+        font-variation-settings: 'DIST' -15.790;
+    }
+
+    6.666% {
+        font-variation-settings: 'DIST' -5.995;
+    }
+
+    7.666% {
+        font-variation-settings: 'DIST' -1.448;
+    }
+
+    8.333% {
+        font-variation-settings: 'DIST' 0;
+    }
+
+    9% {
+        font-variation-settings: 'DIST' 1.448;
+    }
+
+    10% {
+        font-variation-settings: 'DIST' 5.995;
+    }
+
+    11.666% {
+        font-variation-settings: 'DIST' 15.790;
+    }
+
+    13.333% {
+        font-variation-settings: 'DIST' 26.762;
+    }
+
+    15% {
+        font-variation-settings: 'DIST' 38.270;
+    }
+
+    16.666% {
+        font-variation-settings: 'DIST' 50;
+    }
+
+    18.333% {
+        font-variation-settings: 'DIST' 61.730;
+    }
+
+    20% {
+        font-variation-settings: 'DIST' 73.238;
+    }
+
+    21.666% {
+        font-variation-settings: 'DIST' 84.210;
+    }
+
+    23.333% {
+        font-variation-settings: 'DIST' 94.005;
+    }
+
+    24.333% {
+        font-variation-settings: 'DIST' 98.552;
+    }
+
+    25% {
+        font-variation-settings: 'DIST' 100;
+    }
+
+    25.666% {
+        font-variation-settings: 'DIST' 101.448;
+    }
+
+    26.666% {
+        font-variation-settings: 'DIST' 105.995;
+    }
+
+    28.333% {
+        font-variation-settings: 'DIST' 115.790;
+    }
+
+    30% {
+        font-variation-settings: 'DIST' 126.762;
+    }
+
+    31.666% {
+        font-variation-settings: 'DIST' 138.270;
+    }
+
+    33.333% {
+        font-variation-settings: 'DIST' 150;
+    }
+
+    35% {
+        font-variation-settings: 'DIST' 161.730;
+    }
+
+    36.666% {
+        font-variation-settings: 'DIST' 173.238;
+    }
+
+    38.333% {
+        font-variation-settings: 'DIST' 184.210;
+    }
+
+    40% {
+        font-variation-settings: 'DIST' 194.005;
+    }
+
+    41% {
+        font-variation-settings: 'DIST' 198.552;
+    }
+
+    41.666% {
+        font-variation-settings: 'DIST' 200;
+    }
+
+    42.333% {
+        font-variation-settings: 'DIST' 201.448;
+    }
+
+    43.333% {
+        font-variation-settings: 'DIST' 205.995;
+    }
+
+    45% {
+        font-variation-settings: 'DIST' 215.790;
+    }
+
+    46.666% {
+        font-variation-settings: 'DIST' 226.762;
+    }
+
+    48.333% {
+        font-variation-settings: 'DIST' 238.270;
+    }
+
+    50% {
+        font-variation-settings: 'DIST' 250;
+    }
+
+    51.666% {
+        font-variation-settings: 'DIST' 261.730;
+    }
+
+    53.333% {
+        font-variation-settings: 'DIST' 273.238;
+    }
+
+    55% {
+        font-variation-settings: 'DIST' 284.210;
+    }
+
+    56.666% {
+        font-variation-settings: 'DIST' 294.005;
+    }
+
+    57.666% {
+        font-variation-settings: 'DIST' 298.552;
+    }
+
+    58.333% {
+        font-variation-settings: 'DIST' 300;
+    }
+
+    59% {
+        font-variation-settings: 'DIST' 301.448;
+    }
+
+    60% {
+        font-variation-settings: 'DIST' 305.995;
+    }
+
+    61.666% {
+        font-variation-settings: 'DIST' 315.790;
+    }
+
+    63.333% {
+        font-variation-settings: 'DIST' 326.762;
+    }
+
+    65% {
+        font-variation-settings: 'DIST' 338.270;
+    }
+
+    66.666% {
+        font-variation-settings: 'DIST' 350;
+    }
+
+    68.333% {
+        font-variation-settings: 'DIST' 361.730;
+    }
+
+    70% {
+        font-variation-settings: 'DIST' 373.238;
+    }
+
+    71.666% {
+        font-variation-settings: 'DIST' 384.210;
+    }
+
+    73.333% {
+        font-variation-settings: 'DIST' 394.005;
+    }
+
+    74.333% {
+        font-variation-settings: 'DIST' 398.552;
+    }
+
+    75% {
+        font-variation-settings: 'DIST' 400;
+    }
+
+    75.666% {
+        font-variation-settings: 'DIST' 401.448;
+    }
+
+    76.666% {
+        font-variation-settings: 'DIST' 405.995;
+    }
+
+    78.333% {
+        font-variation-settings: 'DIST' 415.790;
+    }
+
+    80% {
+        font-variation-settings: 'DIST' 426.762;
+    }
+
+    81.666% {
+        font-variation-settings: 'DIST' 438.270;
+    }
+
+    83.333% {
+        font-variation-settings: 'DIST' 450;
+    }
+
+    85% {
+        font-variation-settings: 'DIST' 461.730;
+    }
+
+    86.666% {
+        font-variation-settings: 'DIST' 473.238;
+    }
+
+    88.333% {
+        font-variation-settings: 'DIST' 484.210;
+    }
+
+    90% {
+        font-variation-settings: 'DIST' 494.005;
+    }
+
+    91% {
+        font-variation-settings: 'DIST' 498.552;
+    }
+
+    91.666% {
+        font-variation-settings: 'DIST' 500;
+    }
+
+    92.333% {
+        font-variation-settings: 'DIST' 501.448;
+    }
+
+    93.333% {
+        font-variation-settings: 'DIST' 505.995;
+    }
+
+    95% {
+        font-variation-settings: 'DIST' 515.790;
+    }
+
+    96.666% {
+        font-variation-settings: 'DIST' 526.762;
+    }
+
+    98.333% {
+        font-variation-settings: 'DIST' 538.270;
+    }
+
+    100% {
+        font-variation-settings: 'DIST' 550;
+    }
+
+}
+
+@keyframes a-m2 {
+
+    0% {
+        font-variation-settings: 'DIST' -50;
+    }
+
+    1% {
+        font-variation-settings: 'DIST' -38.270;
+    }
+
+    2% {
+        font-variation-settings: 'DIST' -26.762;
+    }
+
+    3% {
+        font-variation-settings: 'DIST' -15.790;
+    }
+
+    4% {
+        font-variation-settings: 'DIST' -5.995;
+    }
+
+    4.6% {
+        font-variation-settings: 'DIST' -1.448;
+    }
+
+    5% {
+        font-variation-settings: 'DIST' 0;
+    }
+
+    5.4% {
+        font-variation-settings: 'DIST' 1.448;
+    }
+
+    6% {
+        font-variation-settings: 'DIST' 5.995;
+    }
+
+    7% {
+        font-variation-settings: 'DIST' 15.790;
+    }
+
+    8% {
+        font-variation-settings: 'DIST' 26.762;
+    }
+
+    9% {
+        font-variation-settings: 'DIST' 38.270;
+    }
+
+    10% {
+        font-variation-settings: 'DIST' 50;
+    }
+
+    11% {
+        font-variation-settings: 'DIST' 61.730;
+    }
+
+    12% {
+        font-variation-settings: 'DIST' 73.238;
+    }
+
+    13% {
+        font-variation-settings: 'DIST' 84.210;
+    }
+
+    14% {
+        font-variation-settings: 'DIST' 94.005;
+    }
+
+    14.6% {
+        font-variation-settings: 'DIST' 98.552;
+    }
+
+    15% {
+        font-variation-settings: 'DIST' 100;
+    }
+
+    15.4% {
+        font-variation-settings: 'DIST' 101.448;
+    }
+
+    16% {
+        font-variation-settings: 'DIST' 105.995;
+    }
+
+    17% {
+        font-variation-settings: 'DIST' 115.790;
+    }
+
+    18% {
+        font-variation-settings: 'DIST' 126.762;
+    }
+
+    19% {
+        font-variation-settings: 'DIST' 138.270;
+    }
+
+    20% {
+        font-variation-settings: 'DIST' 150;
+    }
+
+    21% {
+        font-variation-settings: 'DIST' 161.730;
+    }
+
+    22% {
+        font-variation-settings: 'DIST' 173.238;
+    }
+
+    23% {
+        font-variation-settings: 'DIST' 184.210;
+    }
+
+    24% {
+        font-variation-settings: 'DIST' 194.005;
+    }
+
+    24.6% {
+        font-variation-settings: 'DIST' 198.552;
+    }
+
+    25% {
+        font-variation-settings: 'DIST' 200;
+    }
+
+    25.4% {
+        font-variation-settings: 'DIST' 201.448;
+    }
+
+    26% {
+        font-variation-settings: 'DIST' 205.995;
+    }
+
+    27% {
+        font-variation-settings: 'DIST' 215.790;
+    }
+
+    28% {
+        font-variation-settings: 'DIST' 226.762;
+    }
+
+    29% {
+        font-variation-settings: 'DIST' 238.270;
+    }
+
+    30% {
+        font-variation-settings: 'DIST' 250;
+    }
+
+    31% {
+        font-variation-settings: 'DIST' 261.730;
+    }
+
+    32% {
+        font-variation-settings: 'DIST' 273.238;
+    }
+
+    33% {
+        font-variation-settings: 'DIST' 284.210;
+    }
+
+    34% {
+        font-variation-settings: 'DIST' 294.005;
+    }
+
+    34.6% {
+        font-variation-settings: 'DIST' 298.552;
+    }
+
+    35% {
+        font-variation-settings: 'DIST' 300;
+    }
+
+    35.4% {
+        font-variation-settings: 'DIST' 301.448;
+    }
+
+    36% {
+        font-variation-settings: 'DIST' 305.995;
+    }
+
+    37% {
+        font-variation-settings: 'DIST' 315.790;
+    }
+
+    38% {
+        font-variation-settings: 'DIST' 326.762;
+    }
+
+    39% {
+        font-variation-settings: 'DIST' 338.270;
+    }
+
+    40% {
+        font-variation-settings: 'DIST' 350;
+    }
+
+    41% {
+        font-variation-settings: 'DIST' 361.730;
+    }
+
+    42% {
+        font-variation-settings: 'DIST' 373.238;
+    }
+
+    43% {
+        font-variation-settings: 'DIST' 384.210;
+    }
+
+    44% {
+        font-variation-settings: 'DIST' 394.005;
+    }
+
+    44.6% {
+        font-variation-settings: 'DIST' 398.552;
+    }
+
+    45% {
+        font-variation-settings: 'DIST' 400;
+    }
+
+    45.4% {
+        font-variation-settings: 'DIST' 401.448;
+    }
+
+    46% {
+        font-variation-settings: 'DIST' 405.995;
+    }
+
+    47% {
+        font-variation-settings: 'DIST' 415.790;
+    }
+
+    48% {
+        font-variation-settings: 'DIST' 426.762;
+    }
+
+    49% {
+        font-variation-settings: 'DIST' 438.270;
+    }
+
+    50% {
+        font-variation-settings: 'DIST' 450;
+    }
+
+    51% {
+        font-variation-settings: 'DIST' 461.730;
+    }
+
+    52% {
+        font-variation-settings: 'DIST' 473.238;
+    }
+
+    53% {
+        font-variation-settings: 'DIST' 484.210;
+    }
+
+    54% {
+        font-variation-settings: 'DIST' 494.005;
+    }
+
+    54.6% {
+        font-variation-settings: 'DIST' 498.552;
+    }
+
+    55% {
+        font-variation-settings: 'DIST' 500;
+    }
+
+    55.4% {
+        font-variation-settings: 'DIST' 501.448;
+    }
+
+    56% {
+        font-variation-settings: 'DIST' 505.995;
+    }
+
+    57% {
+        font-variation-settings: 'DIST' 515.790;
+    }
+
+    58% {
+        font-variation-settings: 'DIST' 526.762;
+    }
+
+    59% {
+        font-variation-settings: 'DIST' 538.270;
+    }
+
+    60% {
+        font-variation-settings: 'DIST' 550;
+    }
+
+    61% {
+        font-variation-settings: 'DIST' 561.730;
+    }
+
+    62% {
+        font-variation-settings: 'DIST' 573.238;
+    }
+
+    63% {
+        font-variation-settings: 'DIST' 584.210;
+    }
+
+    64% {
+        font-variation-settings: 'DIST' 594.005;
+    }
+
+    64.6% {
+        font-variation-settings: 'DIST' 598.552;
+    }
+
+    65% {
+        font-variation-settings: 'DIST' 600;
+    }
+
+    65.4% {
+        font-variation-settings: 'DIST' 601.448;
+    }
+
+    66% {
+        font-variation-settings: 'DIST' 605.995;
+    }
+
+    67% {
+        font-variation-settings: 'DIST' 615.790;
+    }
+
+    68% {
+        font-variation-settings: 'DIST' 626.762;
+    }
+
+    69% {
+        font-variation-settings: 'DIST' 638.270;
+    }
+
+    70% {
+        font-variation-settings: 'DIST' 650;
+    }
+
+    71% {
+        font-variation-settings: 'DIST' 661.730;
+    }
+
+    72% {
+        font-variation-settings: 'DIST' 673.238;
+    }
+
+    73% {
+        font-variation-settings: 'DIST' 684.210;
+    }
+
+    74% {
+        font-variation-settings: 'DIST' 694.005;
+    }
+
+    74.6% {
+        font-variation-settings: 'DIST' 698.552;
+    }
+
+    75% {
+        font-variation-settings: 'DIST' 700;
+    }
+
+    75.4% {
+        font-variation-settings: 'DIST' 701.448;
+    }
+
+    76% {
+        font-variation-settings: 'DIST' 705.995;
+    }
+
+    77% {
+        font-variation-settings: 'DIST' 715.790;
+    }
+
+    78% {
+        font-variation-settings: 'DIST' 726.762;
+    }
+
+    79% {
+        font-variation-settings: 'DIST' 738.270;
+    }
+
+    80% {
+        font-variation-settings: 'DIST' 750;
+    }
+
+    81% {
+        font-variation-settings: 'DIST' 761.730;
+    }
+
+    82% {
+        font-variation-settings: 'DIST' 773.238;
+    }
+
+    83% {
+        font-variation-settings: 'DIST' 784.210;
+    }
+
+    84% {
+        font-variation-settings: 'DIST' 794.005;
+    }
+
+    84.6% {
+        font-variation-settings: 'DIST' 798.552;
+    }
+
+    85% {
+        font-variation-settings: 'DIST' 800;
+    }
+
+    85.4% {
+        font-variation-settings: 'DIST' 801.448;
+    }
+
+    86% {
+        font-variation-settings: 'DIST' 805.995;
+    }
+
+    87% {
+        font-variation-settings: 'DIST' 815.790;
+    }
+
+    88% {
+        font-variation-settings: 'DIST' 826.762;
+    }
+
+    89% {
+        font-variation-settings: 'DIST' 838.270;
+    }
+
+    90% {
+        font-variation-settings: 'DIST' 850;
+    }
+
+    91% {
+        font-variation-settings: 'DIST' 861.730;
+    }
+
+    92% {
+        font-variation-settings: 'DIST' 873.238;
+    }
+
+    93% {
+        font-variation-settings: 'DIST' 884.210;
+    }
+
+    94% {
+        font-variation-settings: 'DIST' 894.005;
+    }
+
+    94.6% {
+        font-variation-settings: 'DIST' 898.552;
+    }
+
+    95% {
+        font-variation-settings: 'DIST' 900;
+    }
+
+    95.4% {
+        font-variation-settings: 'DIST' 901.448;
+    }
+
+    96% {
+        font-variation-settings: 'DIST' 905.995;
+    }
+
+    97% {
+        font-variation-settings: 'DIST' 915.790;
+    }
+
+    98% {
+        font-variation-settings: 'DIST' 926.762;
+    }
+
+    99% {
+        font-variation-settings: 'DIST' 938.270;
+    }
+
+    100% {
+        font-variation-settings: 'DIST' 950;
+    }
+
+}
+
+@keyframes a-s1 {
+
+    0% {
+        font-variation-settings: 'DIST' -50;
+    }
+
+    1.666% {
+        font-variation-settings: 'DIST' -38.270;
+    }
+
+    3.333% {
+        font-variation-settings: 'DIST' -26.762;
+    }
+
+    5% {
+        font-variation-settings: 'DIST' -15.790;
+    }
+
+    6.666% {
+        font-variation-settings: 'DIST' -5.995;
+    }
+
+    7.666% {
+        font-variation-settings: 'DIST' -1.448;
+    }
+
+    8.333% {
+        font-variation-settings: 'DIST' 0;
+    }
+
+    9% {
+        font-variation-settings: 'DIST' 1.448;
+    }
+
+    10% {
+        font-variation-settings: 'DIST' 5.995;
+    }
+
+    11.666% {
+        font-variation-settings: 'DIST' 15.790;
+    }
+
+    13.333% {
+        font-variation-settings: 'DIST' 26.762;
+    }
+
+    15% {
+        font-variation-settings: 'DIST' 38.270;
+    }
+
+    16.666% {
+        font-variation-settings: 'DIST' 50;
+    }
+
+    18.333% {
+        font-variation-settings: 'DIST' 61.730;
+    }
+
+    20% {
+        font-variation-settings: 'DIST' 73.238;
+    }
+
+    21.666% {
+        font-variation-settings: 'DIST' 84.210;
+    }
+
+    23.333% {
+        font-variation-settings: 'DIST' 94.005;
+    }
+
+    24.333% {
+        font-variation-settings: 'DIST' 98.552;
+    }
+
+    25% {
+        font-variation-settings: 'DIST' 100;
+    }
+
+    25.666% {
+        font-variation-settings: 'DIST' 101.448;
+    }
+
+    26.666% {
+        font-variation-settings: 'DIST' 105.995;
+    }
+
+    28.333% {
+        font-variation-settings: 'DIST' 115.790;
+    }
+
+    30% {
+        font-variation-settings: 'DIST' 126.762;
+    }
+
+    31.666% {
+        font-variation-settings: 'DIST' 138.270;
+    }
+
+    33.333% {
+        font-variation-settings: 'DIST' 150;
+    }
+
+    35% {
+        font-variation-settings: 'DIST' 161.730;
+    }
+
+    36.666% {
+        font-variation-settings: 'DIST' 173.238;
+    }
+
+    38.333% {
+        font-variation-settings: 'DIST' 184.210;
+    }
+
+    40% {
+        font-variation-settings: 'DIST' 194.005;
+    }
+
+    41% {
+        font-variation-settings: 'DIST' 198.552;
+    }
+
+    41.666% {
+        font-variation-settings: 'DIST' 200;
+    }
+
+    42.333% {
+        font-variation-settings: 'DIST' 201.448;
+    }
+
+    43.333% {
+        font-variation-settings: 'DIST' 205.995;
+    }
+
+    45% {
+        font-variation-settings: 'DIST' 215.790;
+    }
+
+    46.666% {
+        font-variation-settings: 'DIST' 226.762;
+    }
+
+    48.333% {
+        font-variation-settings: 'DIST' 238.270;
+    }
+
+    50% {
+        font-variation-settings: 'DIST' 250;
+    }
+
+    51.666% {
+        font-variation-settings: 'DIST' 261.730;
+    }
+
+    53.333% {
+        font-variation-settings: 'DIST' 273.238;
+    }
+
+    55% {
+        font-variation-settings: 'DIST' 284.210;
+    }
+
+    56.666% {
+        font-variation-settings: 'DIST' 294.005;
+    }
+
+    57.666% {
+        font-variation-settings: 'DIST' 298.552;
+    }
+
+    58.333% {
+        font-variation-settings: 'DIST' 300;
+    }
+
+    59% {
+        font-variation-settings: 'DIST' 301.448;
+    }
+
+    60% {
+        font-variation-settings: 'DIST' 305.995;
+    }
+
+    61.666% {
+        font-variation-settings: 'DIST' 315.790;
+    }
+
+    63.333% {
+        font-variation-settings: 'DIST' 326.762;
+    }
+
+    65% {
+        font-variation-settings: 'DIST' 338.270;
+    }
+
+    66.666% {
+        font-variation-settings: 'DIST' 350;
+    }
+
+    68.333% {
+        font-variation-settings: 'DIST' 361.730;
+    }
+
+    70% {
+        font-variation-settings: 'DIST' 373.238;
+    }
+
+    71.666% {
+        font-variation-settings: 'DIST' 384.210;
+    }
+
+    73.333% {
+        font-variation-settings: 'DIST' 394.005;
+    }
+
+    74.333% {
+        font-variation-settings: 'DIST' 398.552;
+    }
+
+    75% {
+        font-variation-settings: 'DIST' 400;
+    }
+
+    75.666% {
+        font-variation-settings: 'DIST' 401.448;
+    }
+
+    76.666% {
+        font-variation-settings: 'DIST' 405.995;
+    }
+
+    78.333% {
+        font-variation-settings: 'DIST' 415.790;
+    }
+
+    80% {
+        font-variation-settings: 'DIST' 426.762;
+    }
+
+    81.666% {
+        font-variation-settings: 'DIST' 438.270;
+    }
+
+    83.333% {
+        font-variation-settings: 'DIST' 450;
+    }
+
+    85% {
+        font-variation-settings: 'DIST' 461.730;
+    }
+
+    86.666% {
+        font-variation-settings: 'DIST' 473.238;
+    }
+
+    88.333% {
+        font-variation-settings: 'DIST' 484.210;
+    }
+
+    90% {
+        font-variation-settings: 'DIST' 494.005;
+    }
+
+    91% {
+        font-variation-settings: 'DIST' 498.552;
+    }
+
+    91.666% {
+        font-variation-settings: 'DIST' 500;
+    }
+
+    92.333% {
+        font-variation-settings: 'DIST' 501.448;
+    }
+
+    93.333% {
+        font-variation-settings: 'DIST' 505.995;
+    }
+
+    95% {
+        font-variation-settings: 'DIST' 515.790;
+    }
+
+    96.666% {
+        font-variation-settings: 'DIST' 526.762;
+    }
+
+    98.333% {
+        font-variation-settings: 'DIST' 538.270;
+    }
+
+    100% {
+        font-variation-settings: 'DIST' 550;
+    }
+
+}
+
+@keyframes a-s2 {
+
+    0% {
+        font-variation-settings: 'DIST' -50;
+    }
+
+    1% {
+        font-variation-settings: 'DIST' -38.270;
+    }
+
+    2% {
+        font-variation-settings: 'DIST' -26.762;
+    }
+
+    3% {
+        font-variation-settings: 'DIST' -15.790;
+    }
+
+    4% {
+        font-variation-settings: 'DIST' -5.995;
+    }
+
+    4.6% {
+        font-variation-settings: 'DIST' -1.448;
+    }
+
+    5% {
+        font-variation-settings: 'DIST' 0;
+    }
+
+    5.4% {
+        font-variation-settings: 'DIST' 1.448;
+    }
+
+    6% {
+        font-variation-settings: 'DIST' 5.995;
+    }
+
+    7% {
+        font-variation-settings: 'DIST' 15.790;
+    }
+
+    8% {
+        font-variation-settings: 'DIST' 26.762;
+    }
+
+    9% {
+        font-variation-settings: 'DIST' 38.270;
+    }
+
+    10% {
+        font-variation-settings: 'DIST' 50;
+    }
+
+    11% {
+        font-variation-settings: 'DIST' 61.730;
+    }
+
+    12% {
+        font-variation-settings: 'DIST' 73.238;
+    }
+
+    13% {
+        font-variation-settings: 'DIST' 84.210;
+    }
+
+    14% {
+        font-variation-settings: 'DIST' 94.005;
+    }
+
+    14.6% {
+        font-variation-settings: 'DIST' 98.552;
+    }
+
+    15% {
+        font-variation-settings: 'DIST' 100;
+    }
+
+    15.4% {
+        font-variation-settings: 'DIST' 101.448;
+    }
+
+    16% {
+        font-variation-settings: 'DIST' 105.995;
+    }
+
+    17% {
+        font-variation-settings: 'DIST' 115.790;
+    }
+
+    18% {
+        font-variation-settings: 'DIST' 126.762;
+    }
+
+    19% {
+        font-variation-settings: 'DIST' 138.270;
+    }
+
+    20% {
+        font-variation-settings: 'DIST' 150;
+    }
+
+    21% {
+        font-variation-settings: 'DIST' 161.730;
+    }
+
+    22% {
+        font-variation-settings: 'DIST' 173.238;
+    }
+
+    23% {
+        font-variation-settings: 'DIST' 184.210;
+    }
+
+    24% {
+        font-variation-settings: 'DIST' 194.005;
+    }
+
+    24.6% {
+        font-variation-settings: 'DIST' 198.552;
+    }
+
+    25% {
+        font-variation-settings: 'DIST' 200;
+    }
+
+    25.4% {
+        font-variation-settings: 'DIST' 201.448;
+    }
+
+    26% {
+        font-variation-settings: 'DIST' 205.995;
+    }
+
+    27% {
+        font-variation-settings: 'DIST' 215.790;
+    }
+
+    28% {
+        font-variation-settings: 'DIST' 226.762;
+    }
+
+    29% {
+        font-variation-settings: 'DIST' 238.270;
+    }
+
+    30% {
+        font-variation-settings: 'DIST' 250;
+    }
+
+    31% {
+        font-variation-settings: 'DIST' 261.730;
+    }
+
+    32% {
+        font-variation-settings: 'DIST' 273.238;
+    }
+
+    33% {
+        font-variation-settings: 'DIST' 284.210;
+    }
+
+    34% {
+        font-variation-settings: 'DIST' 294.005;
+    }
+
+    34.6% {
+        font-variation-settings: 'DIST' 298.552;
+    }
+
+    35% {
+        font-variation-settings: 'DIST' 300;
+    }
+
+    35.4% {
+        font-variation-settings: 'DIST' 301.448;
+    }
+
+    36% {
+        font-variation-settings: 'DIST' 305.995;
+    }
+
+    37% {
+        font-variation-settings: 'DIST' 315.790;
+    }
+
+    38% {
+        font-variation-settings: 'DIST' 326.762;
+    }
+
+    39% {
+        font-variation-settings: 'DIST' 338.270;
+    }
+
+    40% {
+        font-variation-settings: 'DIST' 350;
+    }
+
+    41% {
+        font-variation-settings: 'DIST' 361.730;
+    }
+
+    42% {
+        font-variation-settings: 'DIST' 373.238;
+    }
+
+    43% {
+        font-variation-settings: 'DIST' 384.210;
+    }
+
+    44% {
+        font-variation-settings: 'DIST' 394.005;
+    }
+
+    44.6% {
+        font-variation-settings: 'DIST' 398.552;
+    }
+
+    45% {
+        font-variation-settings: 'DIST' 400;
+    }
+
+    45.4% {
+        font-variation-settings: 'DIST' 401.448;
+    }
+
+    46% {
+        font-variation-settings: 'DIST' 405.995;
+    }
+
+    47% {
+        font-variation-settings: 'DIST' 415.790;
+    }
+
+    48% {
+        font-variation-settings: 'DIST' 426.762;
+    }
+
+    49% {
+        font-variation-settings: 'DIST' 438.270;
+    }
+
+    50% {
+        font-variation-settings: 'DIST' 450;
+    }
+
+    51% {
+        font-variation-settings: 'DIST' 461.730;
+    }
+
+    52% {
+        font-variation-settings: 'DIST' 473.238;
+    }
+
+    53% {
+        font-variation-settings: 'DIST' 484.210;
+    }
+
+    54% {
+        font-variation-settings: 'DIST' 494.005;
+    }
+
+    54.6% {
+        font-variation-settings: 'DIST' 498.552;
+    }
+
+    55% {
+        font-variation-settings: 'DIST' 500;
+    }
+
+    55.4% {
+        font-variation-settings: 'DIST' 501.448;
+    }
+
+    56% {
+        font-variation-settings: 'DIST' 505.995;
+    }
+
+    57% {
+        font-variation-settings: 'DIST' 515.790;
+    }
+
+    58% {
+        font-variation-settings: 'DIST' 526.762;
+    }
+
+    59% {
+        font-variation-settings: 'DIST' 538.270;
+    }
+
+    60% {
+        font-variation-settings: 'DIST' 550;
+    }
+
+    61% {
+        font-variation-settings: 'DIST' 561.730;
+    }
+
+    62% {
+        font-variation-settings: 'DIST' 573.238;
+    }
+
+    63% {
+        font-variation-settings: 'DIST' 584.210;
+    }
+
+    64% {
+        font-variation-settings: 'DIST' 594.005;
+    }
+
+    64.6% {
+        font-variation-settings: 'DIST' 598.552;
+    }
+
+    65% {
+        font-variation-settings: 'DIST' 600;
+    }
+
+    65.4% {
+        font-variation-settings: 'DIST' 601.448;
+    }
+
+    66% {
+        font-variation-settings: 'DIST' 605.995;
+    }
+
+    67% {
+        font-variation-settings: 'DIST' 615.790;
+    }
+
+    68% {
+        font-variation-settings: 'DIST' 626.762;
+    }
+
+    69% {
+        font-variation-settings: 'DIST' 638.270;
+    }
+
+    70% {
+        font-variation-settings: 'DIST' 650;
+    }
+
+    71% {
+        font-variation-settings: 'DIST' 661.730;
+    }
+
+    72% {
+        font-variation-settings: 'DIST' 673.238;
+    }
+
+    73% {
+        font-variation-settings: 'DIST' 684.210;
+    }
+
+    74% {
+        font-variation-settings: 'DIST' 694.005;
+    }
+
+    74.6% {
+        font-variation-settings: 'DIST' 698.552;
+    }
+
+    75% {
+        font-variation-settings: 'DIST' 700;
+    }
+
+    75.4% {
+        font-variation-settings: 'DIST' 701.448;
+    }
+
+    76% {
+        font-variation-settings: 'DIST' 705.995;
+    }
+
+    77% {
+        font-variation-settings: 'DIST' 715.790;
+    }
+
+    78% {
+        font-variation-settings: 'DIST' 726.762;
+    }
+
+    79% {
+        font-variation-settings: 'DIST' 738.270;
+    }
+
+    80% {
+        font-variation-settings: 'DIST' 750;
+    }
+
+    81% {
+        font-variation-settings: 'DIST' 761.730;
+    }
+
+    82% {
+        font-variation-settings: 'DIST' 773.238;
+    }
+
+    83% {
+        font-variation-settings: 'DIST' 784.210;
+    }
+
+    84% {
+        font-variation-settings: 'DIST' 794.005;
+    }
+
+    84.6% {
+        font-variation-settings: 'DIST' 798.552;
+    }
+
+    85% {
+        font-variation-settings: 'DIST' 800;
+    }
+
+    85.4% {
+        font-variation-settings: 'DIST' 801.448;
+    }
+
+    86% {
+        font-variation-settings: 'DIST' 805.995;
+    }
+
+    87% {
+        font-variation-settings: 'DIST' 815.790;
+    }
+
+    88% {
+        font-variation-settings: 'DIST' 826.762;
+    }
+
+    89% {
+        font-variation-settings: 'DIST' 838.270;
+    }
+
+    90% {
+        font-variation-settings: 'DIST' 850;
+    }
+
+    91% {
+        font-variation-settings: 'DIST' 861.730;
+    }
+
+    92% {
+        font-variation-settings: 'DIST' 873.238;
+    }
+
+    93% {
+        font-variation-settings: 'DIST' 884.210;
+    }
+
+    94% {
+        font-variation-settings: 'DIST' 894.005;
+    }
+
+    94.6% {
+        font-variation-settings: 'DIST' 898.552;
+    }
+
+    95% {
+        font-variation-settings: 'DIST' 900;
+    }
+
+    95.4% {
+        font-variation-settings: 'DIST' 901.448;
+    }
+
+    96% {
+        font-variation-settings: 'DIST' 905.995;
+    }
+
+    97% {
+        font-variation-settings: 'DIST' 915.790;
+    }
+
+    98% {
+        font-variation-settings: 'DIST' 926.762;
+    }
+
+    99% {
+        font-variation-settings: 'DIST' 938.270;
+    }
+
+    100% {
+        font-variation-settings: 'DIST' 950;
+    }
+
+}
